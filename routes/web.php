@@ -25,7 +25,13 @@ Route::middleware([
 });
 
 Route::middleware(['admin'])->group(function () {
-    Route::get('/admin', function () {
-        return view ('admin.index');
-    })->name('admin');
+    Route::group(['prefix' => 'admin'], function () {
+        Route::get('/', function () {
+            return view ('admin.index');
+        })->name('admin');
+
+        Route::get('/users', function () {
+            return view ('admin.users.index');
+        })->name('users');
+    });
 });
