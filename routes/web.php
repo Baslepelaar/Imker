@@ -23,3 +23,9 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::middleware(['admin'])->group(function () {
+    Route::get('/admin', function () {
+        return view ('admin.index');
+    })->name('admin');
+});
