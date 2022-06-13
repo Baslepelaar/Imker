@@ -80,6 +80,15 @@ h6 {
   font-weight: inherit;
 }
 
+table td,th {
+    padding-top: 3vh;
+    padding-right: 3vw;
+}
+
+table a{
+    color: orange;
+}
+
 /*
 Reset links to optimize for opt-in styling instead of opt-out.
 */
@@ -2164,5 +2173,7 @@ select {
     padding-left: 2rem;
     padding-right: 2rem;
   }
+
+
 }
 

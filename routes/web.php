@@ -22,4 +22,8 @@ Route::middleware([
     Route::get('/', function () {
         return view('dashboard');
     })->name('dashboard');
+
+    Route::get('/links', function () {
+        return view('links');
+    })->name('links');
 });
