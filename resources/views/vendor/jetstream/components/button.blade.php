@@ -1,22 +1,3 @@
-@php
-    if (!isset($route)) {
-      $route = null;
-    }
-
-    if (!isset($url)) {
-        $url = null;
-    }
-@endphp
-@if($route)
-    <a href="{{ $route }}" class="{{ $cssClasses ?? 'bg-blue-1000' }} flex mt-3 py-3 px-6 text-lg font-medium text-white">
-        @elseif($url)
-            <a href="{{ url($url) }}" class="{{ $cssClasses ?? 'bg-blue-1000' }} bg-blue-1000 flex mt-3 py-3 px-6 text-lg font-medium text-white">
-                @else
-                    <button {{ $route ?? 'type="submit"'}} {{ $livewire ?? '' }} class="{{ $cssClasses ?? 'bg-blue-1000' }} flex mt-3 py-3 px-6 text-lg font-medium text-white">
-                @endif
-                {{ $slot }}
-                @if($route || $url)
-            </a>
-            @else
-            </button>
-@endif
+<button {{ $attributes->merge(['type' => 'submit', 'class' => 'inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring focus:ring-gray-300 disabled:opacity-25 transition']) }}>
+    {{ $slot }}
+</button>
