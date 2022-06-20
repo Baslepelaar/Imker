@@ -1,9 +1,11 @@
+{{--@extends('layouts.master')--}}
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Users') }}
         </h2>
     </x-slot>
+@section('content')
     <div class="container-fluid">
 
         <!-- Page Heading -->
@@ -44,4 +46,6 @@
         </div>
 
     </div>
+
+
 </x-app-layout>

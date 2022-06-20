@@ -30,8 +30,9 @@ Route::middleware(['admin'])->group(function () {
             return view ('admin.index');
         })->name('admin');
 
-        Route::get('/users', function () {
-            return view ('admin.users.index');
-        })->name('users');
+        Route::resource('users', App\Http\Controllers\Admin\UserController::class);
+//        Route::get('/users', function () {
+//            return view ('admin.users.index');
+//        })->name('users');
     });
 });
