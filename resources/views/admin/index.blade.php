@@ -8,22 +8,7 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                <div class="flex flex-wrap overflow-hidden container mx-auto">
-                    <div class="w-full overflow-hidden xl:my-1 xl:px-3 xl:w-1/4">
-                        @component('elements.input.button', [
-                            'route' => route('users')
-                            ])
-                            Users
-                        @endcomponent
-                    </div>
-                    <div class="w-full overflow-hidden xl:my-1 xl:px-3 xl:w-1/4">
-                        @component('elements.input.button', [
-                            'route' => route('users')
-                            ])
-                            Artikelen
-                        @endcomponent
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>
