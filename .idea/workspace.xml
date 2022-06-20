@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d62246e-6dc4-4fb9-8d26-39ba83766376" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/img/basiscursus_2013_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/img/basiscursus_2013_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/basiscursus.blade.php" afterDir="false" />
+    <list default="true" id="4d62246e-6dc4-4fb9-8d26-39ba83766376" name="Changes" comment="Basiscursus pagina aangemaakt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/navigation-menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/navigation-menu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/img/basiscursus_2013_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/basiscursus_2013_1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/img/basiscursus_2013_2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/basiscursus_2013_2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/basiscursus.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/basiscursus.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -174,6 +173,7 @@
       <recent name="C:\xampp\htdocs\Opdrachten\Imker\resources\views" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Opdrachten\Imker\public" />
       <recent name="C:\xampp\htdocs\Opdrachten\Imker\resources\img" />
     </key>
   </component>
@@ -195,6 +195,14 @@
       <workItem from="1652855607424" duration="76000" />
       <workItem from="1655105165876" duration="2173000" />
     </task>
+    <task id="LOCAL-00001" summary="Basiscursus pagina aangemaakt">
+      <created>1655713991001</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1655713991001</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,5 +218,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Basiscursus pagina aangemaakt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Basiscursus pagina aangemaakt" />
   </component>
 </project>
