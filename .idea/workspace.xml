@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d62246e-6dc4-4fb9-8d26-39ba83766376" name="Changes" comment="Table voor de links">
+    <list default="true" id="4d62246e-6dc4-4fb9-8d26-39ba83766376" name="Changes" comment="Links pagina af">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/links.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/links.blade.php" afterDir="false" />
     </list>
@@ -159,14 +159,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/xampp/htdocs/Opdrachten/Imker",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/Opdrachten/Imker&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
@@ -185,6 +185,7 @@
       <workItem from="1652855607424" duration="76000" />
       <workItem from="1655105165876" duration="2173000" />
       <workItem from="1655706503631" duration="2715000" />
+      <workItem from="1655713126814" duration="284000" />
     </task>
     <task id="LOCAL-00001" summary="Table voor de links">
       <created>1655119068791</created>
