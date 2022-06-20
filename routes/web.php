@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\User;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,8 +32,6 @@ Route::middleware(['admin'])->group(function () {
             return view ('admin.index');
         })->name('admin');
 
-        Route::get('/users', function () {
-            return view ('admin.users.index');
-        })->name('users');
+        Route::get('/users', [UserController::class, 'index'])->name('users');
     });
 });
