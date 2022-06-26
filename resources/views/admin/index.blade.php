@@ -18,7 +18,7 @@
                     </div>
                     <div class="w-full overflow-hidden xl:my-1 xl:px-3 xl:w-1/4">
                         @component('elements.input.button', [
-                            'route' => route('users')
+                            'route' => route('artikelen')
                             ])
                             Artikelen
                         @endcomponent
