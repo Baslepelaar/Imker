@@ -35,6 +35,7 @@ Route::middleware(['admin'])->group(function () {
 
         Route::get('/users', [UserController::class, 'index'])->name('users');
         Route::get('/users/{id}', [UserController::class, 'show'])->name('user');
+        Route::patch('/users/destroy', [UserController::class, 'destroy'])->name('users.destroy');
         Route::get('/Artikelen', [ArtikelenController::class, 'index'])->name('artikelen');
     });
 });
