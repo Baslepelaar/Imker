@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Models\User;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ArtikelenController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,5 +34,6 @@ Route::middleware(['admin'])->group(function () {
         })->name('admin');
 
         Route::get('/users', [UserController::class, 'index'])->name('users');
+        Route::get('/Artikelen', [ArtikelenController::class, 'index'])->name('artikelen');
     });
 });
