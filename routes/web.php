@@ -33,5 +33,6 @@ Route::middleware(['admin'])->group(function () {
         })->name('admin');
 
         Route::get('/users', [UserController::class, 'index'])->name('users');
+        Route::get('/users/{id}', [UserController::class, 'show'])->name('user');
     });
 });

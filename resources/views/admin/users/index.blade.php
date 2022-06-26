@@ -14,7 +14,10 @@
                     {{$user->email}}
                     {{$user->imker}}
                     {{$user->admin}}
-                    
+                    @component('elements.input.button', ['route' => route('user', $user)])
+                        View
+                    @endcomponent
+
                 @endforeach
             </div>
         </div>

@@ -8,7 +8,7 @@
     }
 @endphp
 @if($route)
-    <a href="{{ $route }}" class="{{ $cssClasses ?? 'bg-gray-800' }} flex mt-3 py-3 px-6 text-lg font-medium text-white">
+    <a href="{{ $route }}" class="{{ $cssClasses ?? 'bg-gray-800' }} mt-3 py-3 px-6 text-lg font-medium text-white">
         @elseif($url)
             <a href="{{ url($url) }}" class="{{ $cssClasses ?? 'bg-gray-800' }} bg-gray-800 flex mt-3 py-3 px-6 text-lg font-medium text-white">
                 @else

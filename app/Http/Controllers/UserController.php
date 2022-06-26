@@ -22,7 +22,16 @@ class UserController extends Controller
 
     }
 
-    public function showUser(){
-
+    /**
+     * Show the profile for a given user.
+     *
+     * @param  int  $id
+     * @return \Illuminate\View\View
+     */
+    public function show($id)
+    {
+        return view('admin.users.show', [
+            'user' => User::findOrFail($id)
+        ]);
     }
 }
