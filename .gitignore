@@ -14,7 +14,6 @@ yarn-error.log
 .idea/*
 ../.idea
 /.vscode
-./vendor
 *.xml
 vendor/autoload.php
 vendor/composer/autoload_classmap.php

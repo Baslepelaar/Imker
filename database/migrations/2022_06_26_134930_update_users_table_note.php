@@ -13,9 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
+<<<<<<< HEAD
         Schema::table('users', function (Blueprint $table) {
             $table->longText('note')->after('profile_photo_path');
         });
+=======
+        //
+>>>>>>> parent of 336cd17 (niet nodig op git + gitignore update)
     }
 
     /**
@@ -25,8 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('note');
-        });
+        //
     }
 };

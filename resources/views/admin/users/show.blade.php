@@ -60,7 +60,7 @@
                             'route' => route('users.destroy', $user)
                             ])
                             @method('DELETE')
-                            @component('elements.input.button', ['cssClasses' => 'bg-red-800'])
+                            @component('elements.input.button', ['cssClasses' => 'bg-gray-800'])
                                 Persoon verwijderen
                             @endcomponent
                         @endcomponent
@@ -68,19 +68,19 @@
                 @endif
             </div>
 
-{{--            <div class="pl-32 pt-3 w-full overflow-hidden xl:w-1/2">--}}
-{{--                <div class="flex mt-3">--}}
-{{--                    <div class="pr-4">--}}
-{{--                        @component('elements.input.button', ['url' => 'admin/users/' . $user->id . '/edit'])--}}
-{{--                            Persoon aanpassen--}}
-{{--                        @endcomponent--}}
-{{--                    </div>--}}
+            <div class="pl-32 pt-3 w-full overflow-hidden xl:w-1/2">
+                <div class="flex mt-3">
+                    <div class="pr-4">
+                        @component('elements.input.button', ['url' => 'admin/users/' . $user->id . '/edit'])
+                            Persoon aanpassen
+                        @endcomponent
+                    </div>
 {{--                    <div>--}}
 {{--                        @component('elements.input.button', ['url' => 'admin/users/' . $user->id . '/logs'])--}}
 {{--                            Logs bekijken--}}
 {{--                        @endcomponent--}}
 {{--                    </div>--}}
-{{--                </div>--}}
+                </div>
 {{--                @component('elements.text', ['cssClasses' => 'mt-6 text-2xl text-blue-900 font-bold'])--}}
 {{--                    Gemaakte arrestatiebevelen ({{ count($user->warrants) }})--}}
 {{--                @endcomponent--}}
