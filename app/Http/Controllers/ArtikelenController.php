@@ -43,7 +43,9 @@ class ArtikelenController extends Controller
             'title' => 'required',
             'description' => 'required',
         ]);
-        post::create($request->all());
+        $data = $request->all();
+        $data["author_id"] = Auth::id();
+        post::create($data);
 
         return redirect()->route('admin.Artikelen.index')
             ->with('success','Artikel succesvol aangemaakt.');

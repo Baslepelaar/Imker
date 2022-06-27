@@ -37,12 +37,13 @@ Route::middleware(['admin'])->group(function () {
 
         Route::get('/users', [UserController::class, 'index'])->name('users');
         Route::get('/users/{id}', [UserController::class, 'show'])->name('user');
-        Route::get('/Artikelen', [ArtikelenController::class, 'index'])->name('Artikelen');
-        Route::get('/Artikelen/create', [ArtikelenController::class, 'create']);
+        //Route::get('/Artikelen', [ArtikelenController::class, 'index'])->name('Artikelen');
+        //Route::get('/Artikelen/create', [ArtikelenController::class, 'create']);
 //        Route::get('/Artikelen', [ArtikelenController::class, 'show']);
 //
-//        Route::resource('Artikelen', ArtikelenController::class);
-//        Route::get('Artikelen/create',[ArtikelenController::class,'create']);
+        //        Route::get('Artikelen/create',[ArtikelenController::class,'create']);
 //        Route::post('Artikelen/store',[ArtikelenController::class,'store'])->name('admin.Artikelen.store');
+       Route::resource('Artikelen', ArtikelenController::class);
+
     });
 });

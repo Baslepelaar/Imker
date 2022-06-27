@@ -9,14 +9,13 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                @section('content')
                     <div class="row">
                         <div class="col-lg-12 margin-tb">
                             <div class="pull-left">
                                 <h2>Artikelen beheren</h2>
                             </div>
                             <div class="pull-right">
-                                <a class="btn btn-success" href="{{ route('admin.Artikelen.create') }}">Nieuwe artikel aanmaken</a>
+                                <a class="btn btn-success" href="{{ route('Artikelen.create') }}">Nieuwe artikel aanmaken</a>
                             </div>
                         </div>
                     </div>
@@ -30,7 +29,7 @@
                             <th>ID</th>
                             <th>Titel</th>
                             <th>Beschrijving</th>
-                            <th width="280px">Action</th>
+                            <th width="280px">Actie</th>
                         </tr>
                         @foreach ($artikelen as $artikel)
                             <tr>
@@ -49,7 +48,6 @@
                             </tr>
                         @endforeach
                     </table>
-                    {!! $artikel->links() !!}
             </div>
         </div>
     </div>
