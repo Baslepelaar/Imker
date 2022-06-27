@@ -7,7 +7,6 @@
     <list default="true" id="4d62246e-6dc4-4fb9-8d26-39ba83766376" name="Changes" comment="Basiscursus pagina aangemaakt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/basiscursus.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/basiscursus.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

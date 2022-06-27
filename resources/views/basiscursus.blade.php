@@ -8,7 +8,7 @@
     <section class="container py-12">
         <article class="row max-w-7xl mx-auto sm:px-6 lg:px-8">
             <article class="col-6">
-                <h1 class="" style="font-weight:bold; font-size: 2rem; margin-top: 3vh; margin-bottom: 3vh">Basiscursus
+                <h1 style="font-weight:bold; font-size: 2rem; margin-top: 3vh; margin-bottom: 3vh">Basiscursus
                     bijen houden</h1>
                 <p>Overweegt U om bijen te gaan houden? Dan is de basiscursus bijen houden een aanrader om goed
                     voorbereid
@@ -33,11 +33,21 @@
                 geïnformeerd.</p>
             </article>
 
-            <article>
-                <img src="img/basiscursus_2013_1.jpg" alt="Basiscursus 2013" width="500" height="600"
-                     style="border-radius: 1vh;">
-                <img src="img/basiscursus_2013_2.jpg" alt="Basiscursus 2013" width="500" height="600"
-                     style="border-radius: 1vh;">
+            <article class="col-6">
+                <div class="card" style="width: 25rem;">
+                    <img src="img/basiscursus_2013_1.jpg" alt="Basiscursus 2013" width="500" height="600"
+                         style="border-radius: 1vh;">
+                    <div class="card-body">
+                        <p class="card-text text-center" style="color: grey">Basiscursus 2013</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 25rem;">
+                    <img src="img/basiscursus_2013_2.jpg" alt="Basiscursus 2013" width="500" height="600"
+                         style="border-radius: 1vh;">
+                    <div class="card-body">
+                        <p class="card-text text-center" style="color: grey">Basiscursus 2013</p>
+                    </div>
+                </div>
             </article>
             <article>
                 <h1 class="" style="font-weight:bold; font-size: 2rem; margin-top: 3vh; margin-bottom: 1vh;">
@@ -46,7 +56,8 @@
                     geplaatst.</p><br>
                 <p>
                     N.B. als het formulier succesvol verzonden is, verschijnt er een bevestiging op de pagina. Is die er
-                    niet en heeft u ook geen kopie ontvangen? Neem dan contact op met de
+                    niet en heeft<br>
+                    u ook geen kopie ontvangen? Neem dan contact op met de
                     <a style="color: orange"
                        href="https://www.imkerpedia.nl/wiki/index.php?title=Bijenkasten">webmaster</a>.<br><br>
                     Inschrijving cursus 2023
@@ -75,7 +86,8 @@
                            pattern="[0-9]{2}-[0-9]{8}">
                 </div>
                 <div class="mb-3 mt-3">
-                    <textarea name="opmerkingen" form="usrform">Opmerkingen</textarea>
+                    <textarea name="opmerkingen" placeholder="Opmerkingen" form="usrform">
+                    </textarea>
                 </div>
                 <p>Ik ben lid van het NBV</p>
                 <input type="radio" id="lid" name="lid" value="ja">
