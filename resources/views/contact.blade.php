@@ -1,100 +1,92 @@
-<x-app-layout>
+<x-guest-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('') }}
         </h2>
+    </x-slot>
 
-        <div class="py-12">
-            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                    <div class="main-container grid md:grid-cols-2">
+    <div class="py-12">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg" style="background-color: rgba(235, 189, 52, 0.5);">
+                <div class="p-6 sm:px-20 bg-white border-b border-gray-200" style="background-color: rgba(235, 189, 52, 0.5); background-image: url('img/imkerbanner.jpg'); height: 10vh; ">
+                    <div class="mt-8 text-2xl text-white">
+                        <h1 style="text-align: center; font-size: 50px"><b>Contact</b></h1>
+                    </div>
+                </div>
 
-                        <article id="page-243" class="post-243 page type-page status-publish hentry">
-
-                            <header class="post-header"
-
-                                    style="font-size: 22px;
-                                    color: yellow;
-                                    font-family: Arial;
-                                    text-align: center;
-                                    margin-bottom: 17px;
-                                    font-size: 22px;
-                                    line-height: 34px;
-                                    letter-spacing: 0.5px;
-                                    font-weight: 600;
-                                    text-transform: uppercase;
-                                    margin-bottom: 8px;">
-                                <h1 class="page-title">Contact</h1>
-                            </header>
-
-                            <article class="post-content" style="text-align: center">
-                                <p>Het bestuur van de Imkervereniging Oegstgeest bestaat uit:</p>
-
-                                <table class="wp-block-table has-fixed-layout is-style-stripes" style="">
-                                    <tbody>
-                                    <tr>
-                                        <td>Alma van der Wijgaard</td>
-                                        <td>voorzitter</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Fred Schalker</td>
-                                        <td>secretaris</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Karel Diephuis</td>
-                                        <td>penningmeester</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Håvar Solheim</td>
-                                        <td>bestuur lid</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-
-                                <p>Voor vragen over de vereniging, of onze cursus, verstuur een mail naar onze <a href="mailto:secretaris@imkervereniging-oegstgeest.nl">secretaris</a>.</p>
-
-                                <p>Voor vragen over de website zelf, neem contact op met de <a href="mailto:webmaster@imkervereniging-oegstgeest.nl">webmaster</a>.</p>
-                        </article>
-                        <div>
-                            <aside class="sidebar-right" style="float:right">
-
-                                <div id="recent-posts-4" class="bard-widget widget_recent_entries">
-                                    <div class="widget-title" style="border-top-color: #fcb400;"><h4>Recente berichten</h4></div>
-                                    <ul style="box-sizing: border-box;">
-                                        <li style="border-bottom-width: 1px;
-                                            border-bottom-style: dotted;
-                                            line-height: 2.1;
-                                            padding: 7px 0;">
-                                            <a href="https://www.imkervereniging-oegstgeest.nl/2022/06/09/honing-slingeren/">Honing slingeren</a>
-                                        </li>
-                                        <li>
-                                            <a href="https://www.imkervereniging-oegstgeest.nl/2022/02/21/bijenmarkt-austerlitz/">Bijenmarkt Austerlitz</a>
-                                        </li>
-                                        <li>
-                                            <a href="https://www.imkervereniging-oegstgeest.nl/2021/11/04/diplomas-uitgereikt/">Diploma’s uitgereikt!</a>
-                                        </li>
-                                        <li>
-                                            <a href="https://www.imkervereniging-oegstgeest.nl/2021/11/01/cursus-specialist-bijenproducten-haarlem/">Cursus Specialist Bijenproducten – Haarlem</a>
-                                        </li>
-                                        <li>
-                                            <a href="https://www.imkervereniging-oegstgeest.nl/2021/08/31/slingeren/">Slingeren</a>
-                                        </li>
-                                        <li>
-                                            <a href="https://www.imkervereniging-oegstgeest.nl/2021/07/12/bijenjournaal/">Bijenjournaal</a>
-                                        </li>
-                                    </ul>
-
-                                </div>	</aside>
+                <div class="bg-gray-200 bg-opacity-25 grid grid-cols-1">
+                    <div class="p-6">
+                        <div class="flex items-center">
+                            <img src="img/bee.png" alt="een bij" class="block h-9 w-auto">
+                            <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold"><a href="https://laravel.com/docs">Onze activiteiten</a></div>
                         </div>
+
+                        <div class="ml-12">
+                            <div class="mt-2 text-sm text-gray-500">
+                                <ul>
+                                    <li>het geven van cursussen over het houden van bijen (zie de pagina ‘<a href="https://www.imkervereniging-oegstgeest.nl/basiscursus-bijenhouden/">basiscursus</a>‘)</li><br>
+                                    <li>het organiseren van lezingen op informatieavonden voor de beginnende imkers</li><br>
+                                    <li>wij stellen beginnende imkers in de gelegenheid om informatie te krijgen van ervaren imkers tijdens informatieavonden en ochtenden, zoals ‘de imkerhoek’</li><br>
+                                    <li>wij versturen&nbsp; interessante artikelen over het houden van bijen (zie de pagina <a href="https://www.imkervereniging-oegstgeest.nl/informatie/">artikelen</a>)</li><br>
+                                </ul>
                             </div>
 
+                            <a href="https://laravel.com/docs">
+                                <div class="mt-3 flex items-center text-sm font-semibold text-indigo-700">
+                                    <div>Explore the documentation</div>
+                                    <div class="ml-1 text-indigo-500">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="p-6 border-t border-gray-200 md:border-t-0 md:border-l">
+                        <div class="flex items-center">
+                            <img src="img/bee.png" alt="een bij" class="block h-9 w-auto">
+                            <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold"><a href="https://laracasts.com">bijenzwerm/hommelnest?</a></div>
+                        </div>
+
+                        <div class="ml-12">
+                            <div class="mt-2 text-sm text-gray-500">
+                                Weet u het verschil tussen een bijenzwerm en een hommelnest zonder dat u er eerder een gezien heeft? Ieder jaar vanaf eind maart/april is er kans dat u een bijenzwerm tegenkomt en af en toe ook een hommelnest. Het kan er eng uitzien vandaar dat we het graag uitleggen zodat u weet wat er gebeurt.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-6 border-t border-gray-200 md:border-t-0 md:border-l">
+                        <div class="flex items-center">
+                            <img src="img/bee.png" alt="een bij" class="block h-9 w-auto">
+                            <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold"><a href="https://laracasts.com">Bijenzwerm</a></div>
+                        </div>
+
+                        <div class="ml-12">
+                            <div class="mt-2 text-sm text-gray-500">
+                                Wat is een bijenzwerm en waarom gaan de bijen zwermen?
+                                In de maanden mei en juni en soms ook nog wel in juli vermeerderen bijenvolken zich. Zij doen dit door een zogenaamde zwerm te vormen. Een flink deel van het volk, enkele duizenden bijen, gaat er vandoor met de koningin in hun midden. Ze gaan op zoek naar een nieuw onderkomen.
+                                Voordat ze dit hebben gevonden maakt de zwerm een tussenstop. Ze vormen een klont bijen aan een boomtak, een hekje of een dakrand. Daar blijven ze een paar uur tot soms een paar dagen hangen. In de tussentijd gaan verkenners op zoek naar een nieuw ‘huis’.
+                                Hoewel een bijenzwerm er dreigend uit kan zien, is ze niet gevaarlijk. Bijen zijn er niet op uit om u te steken. Ze zijn alleen op doorreis en hebben niets te verdedigen tenzij ze aangevallen worden.
+                                Neem afstand tot een zwerm en laat het geheel met rust. Ziet u een bijenzwerm in Oegstgeest of de directe omgeving dan kunt u via zwerm@imkervereniging-oegstgeest.nl direct contact zoeken of stuur een foto en het adres via WhatsApp naar: 06-52024488. Zij kunnen met u een afspraak maken om de bijenzwerm op te halen.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-6 border-t border-gray-200 md:border-t-0 md:border-l">
+                        <div class="flex items-center">
+                            <img src="img/bee.png" alt="een bij" class="block h-9 w-auto">
+                            <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold"><a href="https://laracasts.com">Hommelnest</a></div>
+                        </div>
+
+                        <div class="ml-12">
+                            <div class="mt-2 text-sm text-gray-500">
+                                Hommels worden nog wel eens verward met wespen en bijen. Mensen zijn daarom nog weleens bang dat ze aangevallen worden door de hommel, om die reden willen ze dan ook geen hommelnest in de tuin. Ook rondvliegende hommels worden nog weleens gedood, uit angst voor steken. Een hommelnest verwijderen is eigenlijk niet nodig. Een hommel is niet agressief en het nest bestaat uit maximaal 150 exemplaren. Hommels zijn altijd druk bezig met het verzamelen van stuifmeel en steken bijna niet. Alleen als er direct gevaar dreigt voor een hommel kan zij steken. Een hommelnest kan je het beste lekker laten zitten, tenzij het nest in de weg zit zoals bij een voordeur van een huis. Als er veel menselijke activiteit is in de vliegroute van de hommels op en neer naar hun nest dan kan het verstandig zijn het hommelnest te laten verplaatsen door een imker. Zit uw hommelnest in de weg dan kunt u contact opnemen met de Imkers van Imkervereniging Oegstgeest.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-
         </div>
-
-
-
-
-
-    </x-slot>
-</x-app-layout>
+    </div>
+    </div>
+</x-guest-layout>
