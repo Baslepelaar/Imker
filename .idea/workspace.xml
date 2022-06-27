@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4d62246e-6dc4-4fb9-8d26-39ba83766376" name="Changes" comment="Basiscursus pagina aangemaakt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/img/basiscursus_2013_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/basiscursus_2013_1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/img/basiscursus_2013_2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/basiscursus_2013_2.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/basiscursus.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/basiscursus.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -162,12 +160,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "last_opened_file_path": "C:/xampp/htdocs/Opdrachten/Imker/resources/views",
-    "nodejs_package_manager_path": "npm"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/Opdrachten/Imker/resources/views&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\Opdrachten\Imker\resources\views" />

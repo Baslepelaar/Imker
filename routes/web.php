@@ -26,4 +26,8 @@ Route::middleware([
     Route::get('/links', function () {
         return view('links');
     })->name('links');
+
+    Route::get('/basiscursus', function () {
+        return view('basiscursus');
+    })->name('basiscursus');
 });
