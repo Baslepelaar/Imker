@@ -28,14 +28,16 @@
                         <tr>
                             <th>ID</th>
                             <th>Titel</th>
+                            <th>Omschrijving</th>
                             <th>Beschrijving</th>
                             <th width="280px">Actie</th>
                         </tr>
                         @foreach ($artikelen as $artikel)
                             <tr>
-                                <td>{{ ++$i }}</td>
-                                <td>{{ $artikel->name }}</td>
-                                <td>{{ $artikel->detail }}</td>
+                                <td>{{ $artikel->id }}</td>
+                                <td>{{ $artikel->title }}</td>
+                                <td>{{ $artikel->description }}</td>
+                                <td>{{ $artikel->body }}</td>
                                 <td>
                                     <form action="{{ route('Artikelen.destroy',$artikel->id) }}" method="POST">
                                         <a class="btn btn-info" href="{{ route('Artikelen.show',$artikel->id) }}">Bekijken</a>

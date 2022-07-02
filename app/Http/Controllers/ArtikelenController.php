@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ArtikelenController extends Controller
 {
@@ -45,61 +46,74 @@ class ArtikelenController extends Controller
         ]);
         $data = $request->all();
         $data["author_id"] = Auth::id();
+        $data["cat_id"] = 1;
         post::create($data);
 
-        return redirect()->route('admin.Artikelen.index')
+        return redirect()->route('Artikelen.index')
             ->with('success','Artikel succesvol aangemaakt.');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Artikelen $artikel
+     * @param  \App\Models\post $artikel
      * @return \Illuminate\Http\Response
      */
 
-    public function show(post $artikel)
+    public function show($id)
     {
-        return view('admin.Artikelen.show',compact('artikel'));
+        $artikel = Post::find($id);
+        return view('admin.Artikelen.show', [
+            'artikel' => $artikel
+        ]);
+//        return view('admin.Artikelen.show',compact('artikel'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Artikelen  $artikel
+     * @param  \App\Models\post $artikel
      * @return \Illuminate\Http\Response
      */
 
-    public function edit(post $artikel)
+    public function edit($id)
     {
-        return view('admin.Artikelen.edit',compact('artikel'));
+        $artikel = Post::find($id);
+        return view('admin.Artikelen.edit',
+            ['artikel' => $artikel]);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Artikelen  $artikel
+     * @param  \App\Models\post $artikel
      * @return \Illuminate\Http\Response
      */
 
-    public function update(Request $request, Artikelen $artikel)
+    public function update(Request $request, $id)
     {
         $request->validate([
-            'name' => 'required',
-            'detail' => 'required',
+            'title' => 'required',
+            'description' => 'required',
         ]);
 
-        $artikel->update($request->all());
+        $input = Post::find($id);
+        $input->title = $request->title;
+        $input->description = $request->description;
+        $input->body = $request->body;
+        $input->update();
+        //$artikel->update($input);
+//      $artikel->update($request->all());
 
-        return redirect()->route('admin.Artikelen.index')
+        return redirect()->route('Artikelen.index')
             ->with('success','Artikel succesvol bijgewerkt');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Artikelen  $artikel
+     * @param  \App\Models\post $artikel
      * @return \Illuminate\Http\Response
      */
 
