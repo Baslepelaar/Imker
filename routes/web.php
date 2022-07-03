@@ -35,10 +35,7 @@ Route::middleware([
         return view('artikelen');
     })->name('artikelen');
     Route::resource('Artikelen', ArtikelenController::class);
-
-    Route::get('/openArtikel', function () {
-        return view('openArtikel');
-    })->name('openArtikel');
+    Route::get('/openArtikel/{id}', [ArtikelenController::class, 'publicShow'])->name('openArtikel');
 
 });
 

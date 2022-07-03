@@ -1,4 +1,3 @@
-
 <?php
     //require_once '../app/Http/Controllers/ArtikelenController.php';
 
@@ -26,17 +25,12 @@
                     <div class="bg-gray-200 bg-opacity-25 grid grid-cols-1">
                         <div class="p-6">
                             <div class="flex items-center">
-                                <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold"><a href="{{ route('openArtikel',$artikel->id) }}">{{$artikel->title}}</a></div>
+                                <div class="ml-4 text-lg leading-7 font-semibold" style="color:teal;"><a href="{{ url('openArtikel',$artikel->id) }}">{{$artikel->title}}</a></div>
                             </div>
 
                             <div class="ml-12">
                                 <div class="mt-2 text-sm text-gray-500">
-                                    <ul>
-                                        <li>het geven van cursussen over het houden van bijen (zie de pagina ‘<a href="https://www.imkervereniging-oegstgeest.nl/basiscursus-bijenhouden/">basiscursus</a>‘)</li><br>
-                                        <li>het organiseren van lezingen op informatieavonden voor de beginnende imkers</li><br>
-                                        <li>wij stellen beginnende imkers in de gelegenheid om informatie te krijgen van ervaren imkers tijdens informatieavonden en ochtenden, zoals ‘de imkerhoek’</li><br>
-                                        <li>wij versturen&nbsp; interessante artikelen over het houden van bijen (zie de pagina <a href="https://www.imkervereniging-oegstgeest.nl/informatie/">artikelen</a>)</li><br>
-                                    </ul>
+                                    {{$artikel->description}}
                                 </div>
                             </div>
                         </div>

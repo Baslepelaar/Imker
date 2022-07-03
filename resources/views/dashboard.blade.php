@@ -26,7 +26,7 @@
                 <div class="bg-gray-200 bg-opacity-25 grid grid-cols-1">
                     <div class="p-6">
                         <div class="flex items-center">
-                            <img src="img/bee.png" alt="een bij" class="block h-9 w-auto">
+                            <img src="../img/bee.png" alt="een bij" class="block h-9 w-auto">
                             <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold"><a href="https://laravel.com/docs">Onze activiteiten</a></div>
                         </div>
 
@@ -39,21 +39,13 @@
                                     <li>wij versturen&nbsp; interessante artikelen over het houden van bijen (zie de pagina <a href="https://www.imkervereniging-oegstgeest.nl/informatie/">artikelen</a>)</li><br>
                                 </ul>
                             </div>
-
-                            <a href="https://laravel.com/docs">
-                                <div class="mt-3 flex items-center text-sm font-semibold text-indigo-700">
-                                    <div>Explore the documentation</div>
-                                    <div class="ml-1 text-indigo-500">
-                                    </div>
-                                </div>
-                            </a>
                         </div>
                     </div>
 
                     <div class="p-6 border-t border-gray-200 md:border-t-0 md:border-l">
                         <div class="flex items-center">
                             <img src="img/bee.png" alt="een bij" class="block h-9 w-auto">
-                            <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold"><a href="https://laracasts.com">bijenzwerm/hommelnest?</a></div>
+                            <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold"><a href="#">bijenzwerm/hommelnest?</a></div>
                         </div>
 
                         <div class="ml-12">
@@ -66,7 +58,7 @@
                     <div class="p-6 border-t border-gray-200 md:border-t-0 md:border-l">
                         <div class="flex items-center">
                             <img src="img/bee.png" alt="een bij" class="block h-9 w-auto">
-                            <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold"><a href="https://laracasts.com">Bijenzwerm</a></div>
+                            <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold"><a href="#">Bijenzwerm</a></div>
                         </div>
 
                         <div class="ml-12">
@@ -83,7 +75,7 @@
                     <div class="p-6 border-t border-gray-200 md:border-t-0 md:border-l">
                         <div class="flex items-center">
                             <img src="img/bee.png" alt="een bij" class="block h-9 w-auto">
-                            <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold"><a href="https://laracasts.com">Hommelnest</a></div>
+                            <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold"><a href="#">Hommelnest</a></div>
                         </div>
 
                         <div class="ml-12">
@@ -92,7 +84,6 @@
                             </div>
                         </div>
                     </div>
-
                     </div>
                 </div>
             </div>
