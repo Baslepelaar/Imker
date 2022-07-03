@@ -41,6 +41,13 @@ Route::middleware([
         return view('contact');
     })->name('contact');
 
+    Route::get('/links', function () {
+        return view('links');
+    })->name('links');
+
+    Route::get('/basiscursus', function () {
+        return view('basiscursus');
+    })->name('basiscursus');
 });
 
 Route::middleware(['admin'])->group(function () {
