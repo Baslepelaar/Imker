@@ -10,9 +10,11 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
-/.idea
-./.idea
+.idea
+.idea/*
+../.idea
 /.vscode
+./vendor
 *.xml
 /vendor
 ./vendor
@@ -29,3 +31,4 @@ vendor/composer/installed.php
 vendor/composer/InstalledVersions.php
 vendor/composer/LICENSE
 vendor/composer/platform_check.php
+.idea/workspace.xml

@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\User;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\ArtikelenController;
+use App\Http\Controllers\CKEditorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +17,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//Route::post('ckeditor/upload', 'CKEditorController@upload')->name('image-upload');
+Route::post('ckeditor/upload', [CkeditorController::class, 'upload'])->name('upload');
+
 Route::get('/', function () {
     return view('dashboard');
 });
@@ -22,4 +29,21 @@ Route::middleware([
     Route::get('/', function () {
         return view('dashboard');
     })->name('dashboard');
+});
+
+Route::middleware(['admin'])->group(function () {
+    Route::group(['prefix' => 'admin'], function () {
+        Route::get('/', function () {
+            return view ('admin.index');
+        })->name('admin');
+
+        Route::get('/users', [UserController::class, 'index'])->name('users');
+        Route::get('/users/{id}', [UserController::class, 'show'])->name('user');
+        Route::get('/Artikelen', [ArtikelenController::class, 'show'])->name('Artikelen.show');
+        Route::resource('Artikelen', ArtikelenController::class);
+
+
+
+
+    });
 });
