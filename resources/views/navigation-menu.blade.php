@@ -7,35 +7,29 @@
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
                         <img src="../img/bee.png" alt="een bij" class="block h-9 w-auto">
-
                     </a>
                 </div>
 
-                <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                        {{ __('Home') }}
-                    </x-jet-nav-link>
-                    <x-jet-nav-link href="{{ route('contact') }}" :active="request()->routeIs('contact')">
-                        {{ __('contact') }}
-                    </x-jet-nav-link>
-                    <x-jet-nav-link href="{{ route('artikelen') }}" :active="request()->routeIs('artikelen')">
-                        {{ __('Artikelen') }}
-                    </x-jet-nav-link>
+                    <!-- Navigation Links -->
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+                            {{ __('Home') }}
+                        </x-jet-nav-link>
+                        <x-jet-nav-link href="{{ route('artikelen') }}" :active="request()->routeIs('artikelen')">
+                            {{ __('Artikelen') }}
+                        </x-jet-nav-link>
+                        <x-jet-nav-link href="{{ route('links') }}" :active="request()->routeIs('links')">
+                            {{ __('Links') }}
+                        </x-jet-nav-link>
+                        <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                            <x-jet-nav-link href="{{ route('basiscursus') }}" :active="request()->routeIs('basiscursus')">
+                                {{ __('Basiscursus') }}
+                            </x-jet-nav-link>
+                        <x-jet-nav-link href="{{ route('contact') }}" :active="request()->routeIs('contact')">
+                            {{ __('Contact') }}
+                        </x-jet-nav-link>
+                    </div>
                 </div>
-
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('links') }}" :active="request()->routeIs('dashboard')">
-                        {{ __('Links') }}
-                    </x-jet-nav-link>
-                </div>
-
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('basiscursus') }}" :active="request()->routeIs('dashboard')">
-                        {{ __('Basiscursus') }}
-                    </x-jet-nav-link>
-                </div>
-
             </div>
 
             <div class="hidden sm:flex sm:items-center sm:ml-6">
