@@ -36,6 +36,14 @@ Route::middleware([
 
 });
 
+Route::get('/links', function () {
+    return view('links');
+})->name('links');
+
+Route::get('/basiscursus', function () {
+    return view('basiscursus');
+})->name('basiscursus');
+
 Route::middleware(['admin'])->group(function () {
     Route::group(['prefix' => 'admin'], function () {
         Route::get('/', function () {
@@ -46,9 +54,5 @@ Route::middleware(['admin'])->group(function () {
         Route::get('/users/{id}', [UserController::class, 'show'])->name('user');
         Route::get('/Artikelen', [ArtikelenController::class, 'show'])->name('Artikelen.show');
         Route::resource('Artikelen', ArtikelenController::class);
-
-
-
-
     });
 });
