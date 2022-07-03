@@ -76,13 +76,30 @@ class UserController extends Controller
      */
     public function update(UserRequest $request, User $user)
     {
-        $updatedUser = $user->update($request->validated());
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+        ]);
 
-//        Session::flash('message', 'De gebruiker is met succes aangepast.');
-        $message = "Je hebt een gebruiker bewerkt";
-//        Activity::all();
+        $input = User::find($user);
+        $input->name = $request->name; //ik weet niet waarom ik hier alles handmatig moet invoeren
+        $input->email = $request->email;
+        $input->note = $request->note;
+        $input->update();
+        //$artikel->update($input);
+//      $artikel->update($request->all());
 
-        return redirect()->route('users');
+        return redirect()->route('users')
+            ->with('success','Artikel succesvol bijgewerkt');
+
+
+//        $updatedUser = $user->update($request->validated());
+//
+////        Session::flash('message', 'De gebruiker is met succes aangepast.');
+//        $message = "Je hebt een gebruiker bewerkt";
+////        Activity::all();
+//
+//        return redirect()->route('users');
     }
 
     /**
