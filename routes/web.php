@@ -37,6 +37,10 @@ Route::middleware([
     Route::resource('Artikelen', ArtikelenController::class);
     Route::get('/openArtikel/{id}', [ArtikelenController::class, 'publicShow'])->name('openArtikel');
 
+    Route::get('/contact', function () {
+        return view('contact');
+    })->name('contact');
+
 });
 
 Route::middleware(['admin'])->group(function () {
@@ -52,4 +56,6 @@ Route::middleware(['admin'])->group(function () {
         Route::post('/users/destroy/{user}', [UserController::class, 'destroy'])->name('users.destroy');
         Route::resource('Artikelen', ArtikelenController::class);
     });
+
 });
+
