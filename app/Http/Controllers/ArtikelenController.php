@@ -78,7 +78,7 @@ class ArtikelenController extends Controller
 
     public function edit($id)
     {
-        $artikel = Post::find($id);
+        $artikel = Post::find($id); //gek genoeg MOET dit handmatig worden opgezocht
         return view('admin.Artikelen.edit',
             ['artikel' => $artikel]);
     }
@@ -99,7 +99,7 @@ class ArtikelenController extends Controller
         ]);
 
         $input = Post::find($id);
-        $input->title = $request->title;
+        $input->title = $request->title; //ik weet niet waarom ik hier alles handmatig moet invoeren
         $input->description = $request->description;
         $input->body = $request->body;
         $input->update();
@@ -117,11 +117,12 @@ class ArtikelenController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function destroy(post $artikel)
+    public function destroy($id)
     {
+        $artikel = Post::find($id);
         $artikel->delete();
 
-        return redirect()->route('admin.Artikelen.index')
+        return redirect()->route('Artikelen.index')
 
             ->with('success','Artikel succesvol verwijderd');
     }

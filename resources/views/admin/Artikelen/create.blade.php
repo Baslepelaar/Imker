@@ -1,4 +1,12 @@
+<script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.ckeditor').ckeditor();
+    });
+</script>
+
 @extends('admin.Artikelen.layout')
+
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -47,7 +55,7 @@
                             <div class="col-xs-12 col-sm-12 col-md-12">
                                 <div class="form-group">
                                     <strong>Beschrijving:</strong>
-                                    <textarea class="form-control" style="height:150px" name="body" placeholder="beschrijving"></textarea>
+                                    <textarea class="ckeditor form-control" name="body" placeholder="beschrijving"></textarea>
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-12 text-center">

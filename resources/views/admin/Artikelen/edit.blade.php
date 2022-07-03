@@ -1,3 +1,10 @@
+<script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.ckeditor').ckeditor();
+    });
+</script>
+
 @extends('admin.Artikelen.layout')
 <x-app-layout>
     <x-slot name="header">
@@ -54,7 +61,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
                                 <strong>Beschrijving:</strong>
-                                <textarea class="form-control" style="height:150px" name="body" placeholder="beschrijving">{{ $artikel->body }}</textarea>
+                                <textarea class="ckeditor form-control" name="body" placeholder="beschrijving">{{ $artikel->body }}</textarea>
                             </div>
                         </div>
 

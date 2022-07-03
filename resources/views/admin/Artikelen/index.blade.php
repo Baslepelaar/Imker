@@ -37,7 +37,7 @@
                                 <td>{{ $artikel->id }}</td>
                                 <td>{{ $artikel->title }}</td>
                                 <td>{{ $artikel->description }}</td>
-                                <td>{{ $artikel->body }}</td>
+                                <td>{!! $artikel->body !!}</td> <!-- geeft weer alsof het html code is !-->
                                 <td>
                                     <form action="{{ route('Artikelen.destroy',$artikel->id) }}" method="POST">
                                         <a class="btn btn-info" href="{{ route('Artikelen.show',$artikel->id) }}">Bekijken</a>
