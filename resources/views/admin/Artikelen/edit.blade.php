@@ -1,8 +1,14 @@
-<script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
 <script type="text/javascript">
     $(document).ready(function () {
         $('.ckeditor').ckeditor();
     });
+    //ik krijg de upload functie niet werkend helaas
+    {{--CKEDITOR.replace( 'CKEStandard', {--}}
+    {{--    filebrowserUploadUrl: "{{route('upload', ['_token' => csrf_token() ])}}",--}}
+    {{--    filebrowserUploadMethod: 'form'--}}
+    {{--});--}}
 </script>
 
 @extends('admin.Artikelen.layout')
@@ -61,7 +67,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
                                 <strong>Beschrijving:</strong>
-                                <textarea class="ckeditor form-control" name="body" placeholder="beschrijving">{{ $artikel->body }}</textarea>
+                                <textarea class="ckeditor form-control" name="body" id="CKEStandard" placeholder="beschrijving">{{ $artikel->body }}</textarea>
                             </div>
                         </div>
 

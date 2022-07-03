@@ -5,6 +5,7 @@
     });
 </script>
 
+
 @extends('admin.Artikelen.layout')
 
 <x-app-layout>
@@ -55,7 +56,7 @@
                             <div class="col-xs-12 col-sm-12 col-md-12">
                                 <div class="form-group">
                                     <strong>Beschrijving:</strong>
-                                    <textarea class="ckeditor form-control" name="body" placeholder="beschrijving"></textarea>
+                                    <textarea class="ckeditor form-control" name="body" id="CKEStandard" placeholder="beschrijving"></textarea>
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-12 text-center">

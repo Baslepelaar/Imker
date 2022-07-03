@@ -123,7 +123,6 @@ class ArtikelenController extends Controller
         $artikel->delete();
 
         return redirect()->route('Artikelen.index')
-
             ->with('success','Artikel succesvol verwijderd');
     }
 }

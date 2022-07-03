@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Models\User;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ArtikelenController;
+use App\Http\Controllers\CKEditorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,7 +17,8 @@ use App\Http\Controllers\ArtikelenController;
 |
 */
 
-
+//Route::post('ckeditor/upload', 'CKEditorController@upload')->name('image-upload');
+Route::post('ckeditor/upload', [CkeditorController::class, 'upload'])->name('upload');
 
 Route::get('/', function () {
     return view('dashboard');
@@ -37,13 +39,10 @@ Route::middleware(['admin'])->group(function () {
 
         Route::get('/users', [UserController::class, 'index'])->name('users');
         Route::get('/users/{id}', [UserController::class, 'show'])->name('user');
-        //Route::get('/Artikelen', [ArtikelenController::class, 'index'])->name('Artikelen');
-        //Route::get('/Artikelen/create', [ArtikelenController::class, 'create']);
         Route::get('/Artikelen', [ArtikelenController::class, 'show'])->name('Artikelen.show');
-//
-        //        Route::get('Artikelen/create',[ArtikelenController::class,'create']);
-//        Route::post('Artikelen/store',[ArtikelenController::class,'store'])->name('admin.Artikelen.store');
-       Route::resource('Artikelen', ArtikelenController::class);
+        Route::resource('Artikelen', ArtikelenController::class);
+
+
 
 
     });
