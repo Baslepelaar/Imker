@@ -7,7 +7,6 @@ use App\Http\Requests\UserRequest;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Auth;
-use Spatie\Activitylog\Models\Activity;
 
 class UserController extends Controller
 {
@@ -62,8 +61,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(User $user)
+    public function edit($id)
     {
+        $user = User::find($id);
         return view('admin.users.edit', compact('user'));
     }
 
@@ -93,20 +93,20 @@ class UserController extends Controller
     public function destroy(User $user)
     {
         if (Auth::user()->id == $user->id) {
-            Session::flash('error', 'Je kan niet jezelf verwijderen...');
-            return redirect()->route('admin.index');
+//            Session::flash('error', 'Je kan niet jezelf verwijderen...');
+            $message = "can't remove self";
         } elseif(Auth::user()->admin && $user->admin) {
-            Session::flash('error', 'Je kan geen andere admins verwijderen....');
-            return redirect()->route('admin.index');
+//            Session::flash('error', 'Je kan geen andere admins verwijderen....');
+            $message = "Mag geen adnere admins verwijderen";
         } elseif(Auth::user()->admin) {
-            $user->delete();
-            Activity::all();
-            Session::flash('message', 'De user is met succes verwijderd.');
+//            $user->delete();
+//            Session::flash('message', 'De user is met succes verwijderd.');
+            $message = "Je hebt een gebruiker verwijderd";
 
-            return redirect()->route('admin.index');
         } else {
-            Session::flash('error', 'Helaas, dit mag jij niet doen.');
+//            Session::flash('error', 'Helaas, dit mag jij niet doen.');
             return redirect()->route('dashboard');
         }
+        return redirect()->route('users')->withInput();
     }
 }
