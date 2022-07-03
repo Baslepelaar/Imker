@@ -29,6 +29,11 @@ Route::middleware([
     Route::get('/', function () {
         return view('dashboard');
     })->name('dashboard');
+
+    Route::get('/contact', function () {
+        return view('contact');
+    })->name('contact');
+
 });
 
 Route::middleware(['admin'])->group(function () {
