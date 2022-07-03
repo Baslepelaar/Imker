@@ -78,10 +78,11 @@ class UserController extends Controller
     {
         $updatedUser = $user->update($request->validated());
 
-        Session::flash('message', 'De collega is met succes aangepast.');
-        Activity::all();
+//        Session::flash('message', 'De gebruiker is met succes aangepast.');
+        $message = "Je hebt een gebruiker bewerkt";
+//        Activity::all();
 
-        return redirect()->route('users.show', $user);
+        return redirect()->route('users');
     }
 
     /**
