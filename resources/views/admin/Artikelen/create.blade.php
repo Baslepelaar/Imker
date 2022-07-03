@@ -20,12 +20,15 @@
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                     <div class="row">
                         <div class="col-lg-12 margin-tb">
+                            <br>
                             <div class="pull-left">
                                 <h2>Nieuwe artikel aanmaken</h2>
                             </div>
                             <div class="pull-right">
+                                <br>
                                 <a class="btn btn-primary" href="{{ route('Artikelen.index') }}"> Back</a>
                             </div>
+                            <br>
                         </div>
                     </div>
                     @if ($errors->any())

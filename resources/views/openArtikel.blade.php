@@ -1,7 +1,7 @@
-<x-app-layout>
+<x-guest-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Artikel bekijken') }}
+            {{'Artikel bekijken'}}
         </h2>
     </x-slot>
 
@@ -9,7 +9,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="pull-right">
                 <button type="button" style="background-color:teal;" class="px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-white hover:text-gray-900 transition">
-                    <a href="{{ route('Artikelen.index') }}">Terug</a>
+                    <a href="{{ route('artikelen') }}">Terug</a>
                 </button>
             </div>
             <br>
@@ -34,4 +34,4 @@
             </div>
         </div>
     </div>
-</x-app-layout>
+</x-guest-layout>>

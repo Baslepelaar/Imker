@@ -24,13 +24,16 @@
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                 <div class="row">
                     <div class="col-lg-12 margin-tb">
+                        <br>
                         <div class="pull-left">
                             <h2>Artikel bewerken</h2>
                         </div>
 
                         <div class="pull-right">
-                            <a class="btn btn-primary" href="{{ route('Artikelen.index') }}"> Back</a>
+                            <br>
+                            <a class="btn btn-primary" href="{{ route('Artikelen.index') }}"> Terug</a>
                         </div>
+                        <br>
                     </div>
                 </div>
 

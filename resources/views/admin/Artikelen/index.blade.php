@@ -1,5 +1,5 @@
 @extends('admin.Artikelen.layout')
-<x-app-layout>
+<x-guest-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Artikelen') }}
@@ -12,11 +12,14 @@
                     <div class="row">
                         <div class="col-lg-12 margin-tb">
                             <div class="pull-left">
+                                <br>
                                 <h2>Artikelen beheren</h2>
                             </div>
+                            <br>
                             <div class="pull-right">
                                 <a class="btn btn-success" href="{{ route('Artikelen.create') }}">Nieuwe artikel aanmaken</a>
                             </div>
+                            <br>
                         </div>
                     </div>
                     @if ($message = Session::get('success'))
@@ -53,4 +56,4 @@
             </div>
         </div>
     </div>
-</x-app-layout>
+</x-guest-layout>

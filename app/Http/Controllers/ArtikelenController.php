@@ -20,6 +20,18 @@ class ArtikelenController extends Controller
 
     }
 
+    public function public(){
+        return post::latest()->paginate(10);
+    }
+
+    public function publicShow($id)
+    {
+        $artikel = Post::find($id);
+        return view('openArtikel', [
+            'artikel' => $artikel
+        ]);
+    }
+
     /**
      * Show the form for creating a new resource.
      *

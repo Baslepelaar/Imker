@@ -6,7 +6,7 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
-                        <img src="img/bee.png" alt="een bij" class="block h-9 w-auto">
+                        <img src="../img/bee.png" alt="een bij" class="block h-9 w-auto">
 
                     </a>
                 </div>
@@ -24,6 +24,8 @@
                     </x-jet-nav-link>
                     <x-jet-nav-link href="{{ route('contact') }}" :active="request()->routeIs('contact')">
                         {{ __('contact') }}
+                    <x-jet-nav-link href="{{ route('artikelen') }}" :active="request()->routeIs('artikelen')">
+                        {{ __('Artikelen') }}
                     </x-jet-nav-link>
                 </div>
             </div>

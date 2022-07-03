@@ -18,11 +18,12 @@ use App\Http\Controllers\CKEditorController;
 */
 
 //Route::post('ckeditor/upload', 'CKEditorController@upload')->name('image-upload');
-Route::post('ckeditor/upload', [CkeditorController::class, 'upload'])->name('upload');
+//Route::post('ckeditor/upload', [CkeditorController::class, 'upload'])->name('upload');
 
 Route::get('/', function () {
     return view('dashboard');
 });
+
 
 Route::middleware([
 ])->group(function () {
@@ -33,6 +34,12 @@ Route::middleware([
     Route::get('/contact', function () {
         return view('contact');
     })->name('contact');
+
+    Route::get('/artikelen', function () {
+        return view('artikelen');
+    })->name('artikelen');
+    Route::resource('Artikelen', ArtikelenController::class);
+    Route::get('/openArtikel/{id}', [ArtikelenController::class, 'publicShow'])->name('openArtikel');
 
 });
 
@@ -52,7 +59,9 @@ Route::middleware(['admin'])->group(function () {
 
         Route::get('/users', [UserController::class, 'index'])->name('users');
         Route::get('/users/{id}', [UserController::class, 'show'])->name('user');
-        Route::get('/Artikelen', [ArtikelenController::class, 'show'])->name('Artikelen.show');
+        Route::get('/users/{id}/edit', [UserController::class, 'edit']);
+        Route::patch('/users/{id}', [UserController::class, 'update'])->name('users.update');
+        Route::post('/users/destroy/{user}', [UserController::class, 'destroy'])->name('users.destroy');
         Route::resource('Artikelen', ArtikelenController::class);
     });
 });
