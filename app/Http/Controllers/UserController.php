@@ -99,7 +99,7 @@ class UserController extends Controller
 //            Session::flash('error', 'Je kan geen andere admins verwijderen....');
             $message = "Mag geen adnere admins verwijderen";
         } elseif(Auth::user()->admin) {
-//            $user->delete();
+            $user->delete();
 //            Session::flash('message', 'De user is met succes verwijderd.');
             $message = "Je hebt een gebruiker verwijderd";
 
