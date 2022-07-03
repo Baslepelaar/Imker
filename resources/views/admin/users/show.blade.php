@@ -59,7 +59,6 @@
                             'method' => 'POST',
                             'route' => route('users.destroy', $user)
                             ])
-                            @method('DELETE')
                             @component('elements.input.button', ['cssClasses' => 'bg-gray-800'])
                                 Persoon verwijderen
                             @endcomponent
