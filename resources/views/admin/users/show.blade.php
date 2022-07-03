@@ -13,14 +13,14 @@
                     <div class="margin-0 w-full my-auto">
                         @component('elements.text', ['cssClasses' => 'pt-3 flex bg-white p-3 my-2'])
                             <label class="text-red-1000"><strong>Naam:</strong></label>
-                                <p class="pl-3 text-red-1000">{{ $user->name }}</p>
+                            <p class="pl-3 text-red-1000">{{ $user->name }}</p>
+                        @endcomponent
+                        @component('elements.text', ['cssClasses' => 'pt-3 flex bg-white p-3 my-2'])
+                            <label class="text-red-1000"><strong>Email:</strong></label>
+                            <p class="pl-3 text-red-1000">{{ $user->email }}</p>
                         @endcomponent
                     </div>
                 </div>
-                @component('elements.text', ['cssClasses' => 'pt-3 flex bg-white p-3 my-2'])
-                    <label class="text-red-1000"><strong>Email:</strong></label>
-                    <p class="pl-3 text-red-1000">{{ $user->email }}</p>
-                @endcomponent
                 @component('elements.text', ['cssClasses' => 'pt-3 flex bg-white p-3 my-2'])
                     <label class="text-red-1000"><strong>Imker:</strong></label>
                     @if($user->imker)
@@ -46,26 +46,23 @@
                     @endif
                 @endcomponent
                 @component('elements.text', ['cssClasses' => 'pt-3 flex bg-white p-3 my-2'])
-                    <label class="text-red-1000"><strong>Voor het laatst ingelogd:</strong></label>
-                    @if($user->last_login)
-                        <p class="pl-3 text-red-1000">{{ date('H:i:s d-m-Y', strtotime($user->last_login)) }}</p>
+                    <label class="text-red-1000"><strong>Voor het laatst geupdate:</strong></label>
+                    @if($user->updated_at)
+                        <p class="pl-3 text-red-1000">{{ date('H:i:s d-m-Y', strtotime($user->updated_at)) }}</p>
                     @else
-                        <p class="pl-3 text-red-1000">Nog nooit ingelogd</p>
+                        <p class="pl-3 text-red-1000">Nog nooit geupdate</p>
                     @endif
                 @endcomponent
-                @if(Auth::user()->admin)
-                    @if(Auth::user()->id != $user->id)
-                        @if(Auth::user()->admin != $user->admin)
-                            @component('elements.form', [
-                              'method' => 'POST',
-                              'route' => route('users.destroy', $user)
+                @if(Auth::user()->id != $user->id)
+                    @if(Auth::user()->admin != $user->admin)
+                        @component('elements.form', [
+                            'method' => 'POST',
+                            'route' => route('users.destroy', $user)
                             ])
-                                @method('DELETE')
-                                @component('elements.input.button', ['cssClasses' => 'bg-red-800'])
-                                    Persoon verwijderen
-                                @endcomponent
+                            @component('elements.input.button', ['cssClasses' => 'bg-gray-800'])
+                                Persoon verwijderen
                             @endcomponent
-                        @endif
+                        @endcomponent
                     @endif
                 @endif
             </div>
@@ -77,41 +74,41 @@
                             Persoon aanpassen
                         @endcomponent
                     </div>
-                    <div>
-                        @component('elements.input.button', ['url' => 'admin/users/' . $user->id . '/logs'])
-                            Logs bekijken
-                        @endcomponent
-                    </div>
+{{--                    <div>--}}
+{{--                        @component('elements.input.button', ['url' => 'admin/users/' . $user->id . '/logs'])--}}
+{{--                            Logs bekijken--}}
+{{--                        @endcomponent--}}
+{{--                    </div>--}}
                 </div>
-                @component('elements.text', ['cssClasses' => 'mt-6 text-2xl text-blue-900 font-bold'])
-                    Gemaakte arrestatiebevelen ({{ count($user->warrants) }})
-                @endcomponent
-                @if(count($user->warrants))
-                    <div>
-                        @foreach($user->warrants->reverse() as $warrant)
-                            @component('elements.card', ['cssClasses' => 'my-2', 'route' => route('warrants.show', $warrant)])
-                                <p><strong>{{ $warrant->title }}</strong></p>
-                                <p>Gemaakt op: {{ date('H:i:s d-m-Y', strtotime($warrant->created_at)) }}</p>
-                            @endcomponent
-                        @endforeach
-                    </div>
-                @else
-                    <p class="font-bold">{{ $user->name }} heeft geen arrestatiebevelen die open staan geschreven.</p>
-                @endif
+{{--                @component('elements.text', ['cssClasses' => 'mt-6 text-2xl text-blue-900 font-bold'])--}}
+{{--                    Gemaakte arrestatiebevelen ({{ count($user->warrants) }})--}}
+{{--                @endcomponent--}}
+{{--                @if(count($user->warrants))--}}
+{{--                    <div>--}}
+{{--                        @foreach($user->warrants->reverse() as $warrant)--}}
+{{--                            @component('elements.card', ['cssClasses' => 'my-2', 'route' => route('warrants.show', $warrant)])--}}
+{{--                                <p><strong>{{ $warrant->title }}</strong></p>--}}
+{{--                                <p>Gemaakt op: {{ date('H:i:s d-m-Y', strtotime($warrant->created_at)) }}</p>--}}
+{{--                            @endcomponent--}}
+{{--                        @endforeach--}}
+{{--                    </div>--}}
+{{--                @else--}}
+{{--                    <p class="font-bold">{{ $user->name }} heeft geen arrestatiebevelen die open staan geschreven.</p>--}}
+{{--                @endif--}}
 
-                @component('elements.text', ['cssClasses' => 'mt-8 text-2xl text-blue-900 font-bold'])
-                    Gemaakte rapportages ({{ count($user->reports) }})
-                @endcomponent
-                @if(count($user->reports))
-                    @foreach($user->reports->reverse() as $report)
-                        @component('elements.card', ['cssClasses' => 'my-2', 'route' => route('reports.show', $report)])
-                            <p><span class="text-gray-500">#{{ $report->unique_random_id }}</span> <strong>{{ $report->title }}</strong></p>
-                            <p>Gemaakt op: {{ date('H:i:s d-m-Y', strtotime($report->created_at)) }}</p>
-                        @endcomponent
-                    @endforeach
-                @else
-                    <p class="font-bold">{{ $user->name }} heeft geen rapportages die open staan geschreven.</p>
-                @endif
+{{--                @component('elements.text', ['cssClasses' => 'mt-8 text-2xl text-blue-900 font-bold'])--}}
+{{--                    Gemaakte rapportages ({{ count($user->reports) }})--}}
+{{--                @endcomponent--}}
+{{--                @if(count($user->reports))--}}
+{{--                    @foreach($user->reports->reverse() as $report)--}}
+{{--                        @component('elements.card', ['cssClasses' => 'my-2', 'route' => route('reports.show', $report)])--}}
+{{--                            <p><span class="text-gray-500">#{{ $report->unique_random_id }}</span> <strong>{{ $report->title }}</strong></p>--}}
+{{--                            <p>Gemaakt op: {{ date('H:i:s d-m-Y', strtotime($report->created_at)) }}</p>--}}
+{{--                        @endcomponent--}}
+{{--                    @endforeach--}}
+{{--                @else--}}
+{{--                    <p class="font-bold">{{ $user->name }} heeft geen rapportages die open staan geschreven.</p>--}}
+{{--                @endif--}}
             </div>
         </div>
     </div>
