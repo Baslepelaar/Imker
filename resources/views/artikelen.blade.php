@@ -1,61 +1,47 @@
-@extends('admin.Artikelen.layout')
+
 <?php
     //require_once '../app/Http/Controllers/ArtikelenController.php';
 
     $artikelen = new \App\Http\Controllers\ArtikelenController();
-    $artikelen = $artikelen->index();
+    $artikelen = $artikelen->public();
 ?>
 <x-guest-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Homepage') }}
+            {{ __('Artikelen over imkers') }}
         </h2>
     </x-slot>
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg" style="background-color: rgba(235, 189, 52, 0.5);">
-                <div class="p-6 sm:px-20 bg-white border-b border-gray-200" style="background-color: rgba(235, 189, 52, 0.5); background-image: url('img/imkerbanner.jpg'); height: 30vh; ">
+                <div class="p-6 sm:px-20 bg-white border-b border-gray-200" style="background-color: rgba(235, 189, 52, 0.5); background-image: url('img/imkerbanner.jpg'); height: 20vh; ">
                     <div class="mt-8 text-2xl text-white">
-                        <h1 style="text-align: center; font-size: 50px"><b>Welkom bij Imkers!</b></h1>
-                    </div>
-
-                    <div class="mt-8 text-2xl text-white">
-                        <b>het houden van bijen!</b>
-                    </div>
-
-                    <div class="mt-6 text-white">
-                        De imkervereniging Oegstgeest en omstreken strekt zich uit over de regio Oegstgeest, Leiden, Lisse, Kaag en Braassem.
-                        De imkervereniging stelt zich ten doel de kennis over het houden van bijen en de relatie van bijen met hun (planten) omgeving te verbreden bij zowel de imkers, als bij het grotere publiek.
+                        <h1 style="text-align: center; font-size: 50px"><b>Artikelen</b></h1>
                     </div>
                 </div>
-                    <table class="table table-bordered">
-                        <tr>
-                            <th>ID</th>
-                            <th>Titel</th>
-                            <th>Omschrijving</th>
-                            <th>Beschrijving</th>
-                            <th width="280px">Actie</th>
-                        </tr>
 
+            <div>
                     @foreach ($artikelen as $artikel)
-                        <tr>
-                            <td>{{ $artikel->id }}</td>
-                            <td>{{ $artikel->title }}</td>
-                            <td>{{ $artikel->description }}</td>
-                            <td>{!! $artikel->body !!}</td> <!-- geeft weer alsof het html code is !-->
-                            <td>
-                                <form action="{{ route('Artikelen.destroy',$artikel->id) }}" method="POST">
-                                    <a class="btn btn-info" href="{{ route('Artikelen.show',$artikel->id) }}">Bekijken</a>
-                                    <a class="btn btn-primary" href="{{ route('Artikelen.edit',$artikel->id) }}">Bewerken</a>
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" class="btn btn-danger">Verwijderen</button>
-                                </form>
-                            </td>
-                        </tr>
+                    <div class="bg-gray-200 bg-opacity-25 grid grid-cols-1">
+                        <div class="p-6">
+                            <div class="flex items-center">
+                                <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold"><a href="{{ route('openArtikel',$artikel->id) }}">{{$artikel->title}}</a></div>
+                            </div>
+
+                            <div class="ml-12">
+                                <div class="mt-2 text-sm text-gray-500">
+                                    <ul>
+                                        <li>het geven van cursussen over het houden van bijen (zie de pagina ‘<a href="https://www.imkervereniging-oegstgeest.nl/basiscursus-bijenhouden/">basiscursus</a>‘)</li><br>
+                                        <li>het organiseren van lezingen op informatieavonden voor de beginnende imkers</li><br>
+                                        <li>wij stellen beginnende imkers in de gelegenheid om informatie te krijgen van ervaren imkers tijdens informatieavonden en ochtenden, zoals ‘de imkerhoek’</li><br>
+                                        <li>wij versturen&nbsp; interessante artikelen over het houden van bijen (zie de pagina <a href="https://www.imkervereniging-oegstgeest.nl/informatie/">artikelen</a>)</li><br>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     @endforeach
-                    </table>
+
                 </div>
             </div>
         </div>

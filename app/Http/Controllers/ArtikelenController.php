@@ -20,6 +20,12 @@ class ArtikelenController extends Controller
 
     }
 
+    public function public(){
+        return $artikelen = post::latest()->paginate(5);
+        //return view ('artikelen', compact('artikelen'))->with('i', (request()->input('page', 1) - 1) * 5);
+
+    }
+
     /**
      * Show the form for creating a new resource.
      *

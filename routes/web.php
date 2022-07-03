@@ -36,6 +36,10 @@ Route::middleware([
     })->name('artikelen');
     Route::resource('Artikelen', ArtikelenController::class);
 
+    Route::get('/openArtikel', function () {
+        return view('openArtikel');
+    })->name('openArtikel');
+
 });
 
 Route::middleware(['admin'])->group(function () {
@@ -46,7 +50,6 @@ Route::middleware(['admin'])->group(function () {
 
         Route::get('/users', [UserController::class, 'index'])->name('users');
         Route::get('/users/{id}', [UserController::class, 'show'])->name('user');
-        Route::get('/Artikelen', [ArtikelenController::class, 'show'])->name('Artikelen.show');
         Route::resource('Artikelen', ArtikelenController::class);
     });
 });
