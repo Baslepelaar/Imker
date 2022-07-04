@@ -7,6 +7,12 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg" style="background-color: rgba(235, 189, 52, 0.5);">
+                <div class="p-6 sm:px-20 bg-white border-b border-gray-200" style="background-color: rgba(235, 189, 52, 0.5); background-image: url('img/imkerbanner.jpg'); height: 10vh; ">
+                    <div class="mt-8 text-2xl text-white">
+                        <h1 style="text-align: center; font-size: 50px"><b>links</b></h1>
+                    </div>
+                </div>
             <table class="table">
                 <p>Meer informatie over het houden van bijen vindt u op onderstaande links en websites.</p>
                 <h1 class="" style="font-weight:bold; font-size: 2rem; margin-top: 3vh;">Algemene links over
@@ -81,6 +87,7 @@
                 </tr>
                 </tbody>
             </table>
+            </div>
         </div>
     </div>
 </x-guest-layout>
