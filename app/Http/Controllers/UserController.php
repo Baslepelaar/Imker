@@ -91,7 +91,7 @@ class UserController extends Controller
 //      $artikel->update($request->all());
 
         return redirect()->route('users')
-            ->with('success','Artikel succesvol bijgewerkt');
+            ->with('success','Gebruiker succesvol bijgewerkt');
 
 
 //        $updatedUser = $user->update($request->validated());
