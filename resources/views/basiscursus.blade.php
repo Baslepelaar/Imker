@@ -5,8 +5,14 @@
         </h2>
     </x-slot>
 
-    <section class="container py-12">
+    <section class="py-12">
         <article class="row max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg" style="background-color: rgba(235, 189, 52, 0.5);">
+                <div class="p-6 sm:px-20 bg-white border-b border-gray-200" style="background-color: rgba(235, 189, 52, 0.5); background-image: url('img/imkerbanner.jpg'); height: 10vh; ">
+                    <div class="mt-8 text-2xl text-white">
+                        <h1 style="text-align: center; font-size: 50px"><b>Basiscursus</b></h1>
+                    </div>
+                </div>
             <article class="col-6">
                 <h1 style="font-weight:bold; font-size: 2rem; margin-top: 3vh; margin-bottom: 3vh">Basiscursus
                     bijen houden</h1>
@@ -102,6 +108,7 @@
 
                 Mocht u vragen hebben over de cursus, neem dan <a style="color: orange" href="/contact">contact</a>
                 op.</p>
+            </div>
         </article>
     </section>
 </x-guest-layout>
