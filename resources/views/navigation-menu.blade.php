@@ -56,7 +56,7 @@
                         </x-slot>
 
                         <x-slot name="content">
-                            @if(Auth::Check() && Auth::user()->admin)
+                            @if(Auth::Check() && Auth::user()->admin || Auth::Check() && Auth::user()->imker)
                                 <div class="block px-4 py-2 text-xs text-gray-400">
                                     {{ __('Admin paneel') }}
                                 </div>
